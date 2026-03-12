@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Світ Віскі | Головна</title>
+    <!-- Шрифти -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* ========== РАМКА ВАРІАНТ 2 ========= */
+        .fancy-frame-2 {
+            position: relative;
+            display: inline-block;
+            padding: 8px;
+            background: #1e1e1e;
+            box-shadow: 0 0 0 1px #3a2e1e, 0 20px 30px -10px black;
+        }
+
+        .fancy-frame-2::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            border: 1px solid #c9a74d;
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 5;
+            transition: opacity 0.3s;
+        }
+
+        .fancy-frame-2:hover::before {
+            opacity: 1;
+        }
+
+        .fancy-frame-2 img {
+            display: block;
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1;
+            filter: sepia(5%);
+        }
+
+        /* ========== НАЛАШТУВАННЯ РОЗМІРУ ФОТО ========= */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1.2;
+        }
+
+        .hero-image {
+            flex: 0.8;  /* ЗМЕНШЕНО: було 0.8, стало 0.6 (фото займає ще менше місця) */
+            text-align: center;
+        }
+
+        .fancy-frame-2 {
+            max-width: 80%;  /* ЗМЕНШЕНО: було 90%, стало 80% */
+            margin: 0 auto;
+        }
+
+        .fancy-frame-2 img {
+            max-height: 400px;  /* ЗМЕНШЕНО: було 450px, стало 400px */
+            width: auto;
+            margin: 0 auto;
+        }
+
+        /* Адаптація для мобільних */
+        @media (max-width: 992px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .hero-content {
+                flex: 1;
+            }
+
+            .hero-image {
+                flex: 1;
+            }
+
+            .fancy-frame-2 {
+                max-width: 70%;  /* На мобільних ще вужче */
+            }
+
+            .fancy-frame-2 img {
+                max-height: 350px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .fancy-frame-2 {
+                max-width: 90%;  /* На маленьких телефонах ширше */
+            }
+
+            .fancy-frame-2 img {
+                max-height: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="wrapper header-content">
+        <div class="logo">
+            <a href="index.html">
+                <span class="logo-img">🥃</span>
+                <span class="logo-text">Світ Viski</span>
+            </a>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html" class="nav-link active">Головна</a></li>
+                <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+                <li><a href="about.html" class="nav-link">Про нас</a></li>
+                <li><a href="contact.html" class="nav-link">Контакти</a></li>
+            </ul>
+        </nav>
+        <div class="header-buttons">
+            <button>🔍</button>
+            <button>🛒</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="wrapper">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Унікальні Напої<br>для Особливих Моментів</h1>
+                <p>Відкрийте для себе широкий вибір оригінальних смаків та напоїв високої витримки. Справжній джентельмен обирає якість.</p>
+                <div class="hero-buttons">
+                    <a href="catalog.html"><button class="btn-primary">Переглянути каталог</button></a>
+                    <a href="about.html"><button class="btn-secondary">Дізнатися більше</button></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="fancy-frame-2">
+                    <img src="images/jack-daniels-old-no-black-background-beautiful-reflection-bottle-american-whiskey-known-throughout-world-jack-237418596.webp" alt="Jack Daniel's Old No.7">
+                </div>
+            </div>        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="wrapper">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Світ Віскі</h4>
+                <p>Елітний алкоголь з усього світу. Тільки перевірені постачальники та оригінальна продукція.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навігація</h4>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакти</h4>
+                <ul>
+                    <li>📞 +380 67 739 81 20</li>
+                    <li>📧 notscam@ua.com</li>
+                    <li>📍 м. Київ, вул. Віскозна, 1</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 Світ Віскі. Всі права захищені.</p>
+        </div>
+    </div>
+</footer>>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Світ Віскі | Про нас</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    /* ===== СЕКЦІЯ ABOUT ===== */
+
+    .about-section{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:60px;
+    }
+
+    .about-content{
+      flex:1.2;
+    }
+
+    .about-image{
+      flex:0.7;
+      text-align:center;
+    }
+
+    /* ===== РАМКА ===== */
+
+    .fancy-frame-2{
+      position:relative;
+      display:inline-block;
+      padding:8px;
+      background:#1e1e1e;
+      box-shadow:0 0 0 1px #3a2e1e,0 20px 30px -10px black;
+    }
+
+    .fancy-frame-2::before{
+      content:'';
+      position:absolute;
+      top:3px;
+      left:3px;
+      right:3px;
+      bottom:3px;
+      border:1px solid #c9a74d;
+      opacity:0.4;
+      pointer-events:none;
+      z-index:5;
+      transition:opacity .3s;
+    }
+
+    .fancy-frame-2:hover::before{
+      opacity:1;
+    }
+
+    .fancy-frame-2 img{
+      display:block;
+      max-height:420px;
+      width:auto;
+    }
+
+    /* ===== MOBILE ===== */
+
+    @media (max-width:992px){
+
+      .about-section{
+        flex-direction:column;
+        text-align:center;
+        gap:40px;
+      }
+
+      .fancy-frame-2 img{
+        max-height:340px;
+      }
+
+    }
+
+    @media (max-width:576px){
+
+      .fancy-frame-2 img{
+        max-height:260px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="wrapper header-content">
+
+    <div class="logo">
+      <a href="index.html">
+        <span class="logo-img">🥃</span>
+        <span class="logo-text">Світ Viski</span>
+      </a>
+    </div>
+
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html" class="nav-link">Головна</a></li>
+        <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+        <li><a href="about.html" class="nav-link active">Про нас</a></li>
+        <li><a href="contact.html" class="nav-link">Контакти</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-buttons">
+      <button>🔍</button>
+      <button>🛒</button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+  <div class="wrapper">
+
+    <section class="about-section">
+
+      <div class="about-content">
+
+        <h2>Історія <span>нашого</span> смаку</h2>
+
+        <p>Заснований у 2015 році, "Світ Віскі" починався як маленький сімейний бізнес з пристрастю до справжнього якісного алкоголю. Ми віримо, що віскі — це не просто напій, це філософія, історія та мистецтво.</p>
+
+        <p>Сьогодні ми — офіційні імпортери найкращих світових брендів. Ми обираємо тільки ті дистилерії, які зберегли традиції та виробляють продукт з душею. Наша мета — познайомити Україну з культурою споживання віскі, навчити цінувати кожен ковток.</p>
+
+        <div class="signature">
+          З повагою, засновник
+          <span>Краснопольський Марк</span>
+        </div>
+
+      </div>
+
+      <div class="about-image">
+
+        <div class="fancy-frame-2">
+          <img src="images/f4c8238dbb76500cc4fead3052f9f0af.jpg" alt="Інтер'єр бару в стилі old money">
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+<footer>
+
+  <div class="wrapper">
+
+    <div class="footer-content">
+
+      <div class="footer-col">
+        <h4>Світ Віскі</h4>
+        <p>Елітний алкоголь з усього світу. Тільки перевірені постачальники та оригінальна продукція.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Навігація</h4>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="about.html">Про нас</a></li>
+          <li><a href="contact.html">Контакти</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Контакти</h4>
+        <ul>
+          <li>📞 +380 67 739 81 20</li>
+          <li>📧 notscam@ua.com</li>
+          <li>📍 м. Київ, вул. Віскозна, 1</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      <p>© 2024 Світ Віскі. Всі права захищені.</p>
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
